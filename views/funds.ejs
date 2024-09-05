@@ -1,0 +1,20 @@
+<!-- views/funds.ejs -->
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Barangay Funds</h1>
+    <a href="/funds/add">Add New Fund</a>
+    <ul>
+        <% funds.forEach(fund => { %>
+            <li><%= fund.description %> - PHP <%= fund.amount %>
+                <form action="/funds/delete/<%= fund.id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
