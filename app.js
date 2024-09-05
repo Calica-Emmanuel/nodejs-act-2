@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/funds', fundsRoutes);
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Barangay Funds Management' });
+  res.render('index', { title: 'Barangay Budget Planning' });
 });
 
 const PORT = process.env.PORT || 3000;
